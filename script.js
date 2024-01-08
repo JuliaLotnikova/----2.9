@@ -25,3 +25,13 @@ function deductNDFL() {
 function clearDisplay() {
     displayElement.value = '';
 }
+
+function blinkCursor() {
+    var placeholder = document.getElementById("display");
+
+    setInterval(function() {
+        placeholder.placeholder = (placeholder.placeholder === "|") ? "" : "|";
+    }, 500);
+}
+
+blinkCursor();
